@@ -1,7 +1,13 @@
+import { Outlet, Link } from "react-router-dom"
+import Header from "./Header"
+
 export default function Root() {
     return(
         <>
-            <p>lol</p>
+            <Header/>
+            <Outlet />
+
+           <Link to='contacts/1'>1</Link>
         </>
     )
 }
