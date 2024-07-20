@@ -1,18 +1,40 @@
-export default function RealEstateList() {
+import {Link} from 'react-router-dom'
+import { data } from './RealEstateArray'
 
-const apartments = [
-    {
-      id:0,
-      title:'1 room apartment in Vilnius',
-      price: 50000,
-      
-    },
-]
+
+export default function RealEstateList() {
+    
+const list = data.map((apartment) => {
 
     return(
-        <>
-        <p>{apartments[0].title}</p>
-        <p>Apartment 2</p>
-        </>
+      <div key={apartment.id} className="real-estate-item">
+                <Link to={`/realestate/${apartment.id}`}>TEST</Link>
+
+        <ul >
+            <div className="real-estate-image">
+                {apartment.new && <span className='new-property'>New</span>} 
+                <span className="realEstate-type">{apartment.type}</span> 
+                <li><img src={apartment.image}></img></li>
+            </div>
+        <div className="real-estate-info">
+             <li>{apartment.title}</li>
+             <li>{apartment.description}</li>
+             <li>Price {apartment.price} $</li>
+             </div>
+            
+
+        </ul>
+        </div>
+        
+       
+    )
+}
+)
+
+
+    return(
+        <div  className="listItem">
+        {list}
+        </div>
     )
 }

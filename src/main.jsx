@@ -8,6 +8,7 @@ import './index.css'
 import Root from './routes/Root.jsx'
 import ErrorPage from './routes/error-page.jsx';
 import RealEstateList from './routes/RealEstateList.jsx';
+import RealEstateItem from './routes/RealEstateItem.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,11 +17,14 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children: [
       {
-        path: "apartments/:id",
         element: <RealEstateList/>,
       },
     ],
   },
+  {
+    path: '/realestate/:realestateid',
+    element: <RealEstateItem/>,
+  }
   
 ]);
 
