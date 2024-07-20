@@ -1,9 +1,49 @@
-body, html, ul, img, p,li {
-    margin:0;
-    padding:0;
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
     box-sizing: border-box;
-    
-}
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
 
 body {
     font-family: "Roboto", sans-serif;
@@ -18,27 +58,44 @@ body {
     gap:2rem;
 }
 
+.individual-wrapper{
+    justify-content:space-between;
+}
 
+
+a {
+    text-decoration:none;
+}
 
 
 .listItem img {
-    max-width:250px;
+    max-width:300px;
     width:100%;
     border-radius:1rem 1rem 0px 0px;
 }
 
 .listItem {
-    display:flex;
-    gap:1rem;
-}
+    display:flex;}
 
 ul li {
     list-style-type:none;
 }
 
+header {
+    display:flex;
+    height:120px;
+}
+
+header .wrapper {
+    justify-content: space-between;
+}
+
+
+
 
 nav a {
     text-decoration:none;
+    color:black;
 }
 
 .new-property {
@@ -69,22 +126,38 @@ background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, F
 
 nav {
     display:flex;
-    gap:1rem;
+    gap:2rem;
 }
 
 .filter {
     width:125px;
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    justify-content: space-between;
+    align-items:left;
 }
 
 .real-estate-image {
-    
     position:relative;
+    overflow: hidden
 }
 
 .real-estate-item {
     display:flex;
-    max-width:250px;
+    align-items: space-between;
+    flex-direction:column;
+    max-width:300px;
 }
+.real-estate-item-individual {
+    gap:1rem;
+    display:flex;
+    align-items: space-between;
+    flex-direction:column;
+    width:500px;
+}
+
+
 
 .real-estate-info {
     border:1px solid lightgray;
@@ -94,5 +167,24 @@ nav {
 
 input[type='text'] {
     width:100px;
+    padding:0.25rem;
+}
+
+.seeMoreButton {
+    margin-top:1rem;
+    text-align:center;
+    display:block;
+    background: #00b09b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-weight:bold;
+    color:white;
     padding:0.5rem;
+    text-decoration:none;
+    border-radius:1rem;
+}
+
+.individual-view-image {
+    width:500px;
+    border-radius:1rem;
 }

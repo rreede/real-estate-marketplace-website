@@ -2,11 +2,13 @@ export const data =  [
     {
       id:0,
       type: 'Apartment',
-      title:'1 room apartment in Vilnius',
+      title:'1 room',
       description:'test description',
       price: 50000,
       image: 'jarek-ceborski-jn7uVeCdf6U-unsplash.jpg',
       new: true,
+      size: 194,
+      location: 'Antakalnio',
     },
     {
       id:1,
@@ -16,6 +18,8 @@ export const data =  [
       price: 65000,
       image: 'jarek-ceborski-jn7uVeCdf6U-unsplash.jpg',
       new: false,
+      size: 52,
+      location: 'Vilnius',
     },
     {
         id:2,
@@ -25,5 +29,7 @@ export const data =  [
         price: 65000,
         image: 'jarek-ceborski-jn7uVeCdf6U-unsplash.jpg',
         new: false,
+        size: 95,
+        location: 'Palanga',
       }
 ]

@@ -3,12 +3,12 @@ import { data } from './RealEstateArray'
 
 
 export default function RealEstateList() {
-    
+
 const list = data.map((apartment) => {
 
     return(
       <div key={apartment.id} className="real-estate-item">
-                <Link to={`/realestate/${apartment.id}`}>TEST</Link>
+              
 
         <ul >
             <div className="real-estate-image">
@@ -19,9 +19,11 @@ const list = data.map((apartment) => {
         <div className="real-estate-info">
              <li>{apartment.title}</li>
              <li>{apartment.description}</li>
-             <li>Price {apartment.price} $</li>
-             </div>
+             <li><strong>{apartment.price} $</strong></li>
             
+             <Link to={`/realestate/${apartment.id}`}><span className='seeMoreButton'>SEE MORE</span></Link>
+             </div>
+             
 
         </ul>
         </div>

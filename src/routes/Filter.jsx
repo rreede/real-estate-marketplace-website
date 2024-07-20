@@ -4,6 +4,8 @@ export default function Filter(){
             <h2>Filter</h2>
 
             <p>M2</p>
+            <input type="text" />
+
 
             <p>Rooms</p>
             <input type="text" />
