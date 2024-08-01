@@ -9,6 +9,10 @@ import Root from './routes/Root.jsx'
 import ErrorPage from './routes/error-page.jsx';
 import RealEstateList from './routes/RealEstateList.jsx';
 import RealEstateItem from './routes/RealEstateItem.jsx';
+import Wishlist from './routes/Wishlist.jsx';
+import StatisticsView from './routes/StatisticsView.jsx';
+import HousesView from './routes/HousesView.jsx';
+import ApartmentsView from './routes/ApartmentsView.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +28,25 @@ const router = createBrowserRouter([
   {
     path: '/realestate/:realestateid',
     element: <RealEstateItem/>,
-  }
+  },
+  {
+    path: '/wishlist',
+    element: <Wishlist/>,
+  },
+  {
+    path: '/statistics',
+    element: <StatisticsView/>,
+  },
+  {
+    path: '/apartments',
+    element: <ApartmentsView/>,
+  },
+  {
+    path: '/houses',
+    element: <HousesView/>,
+  },
+
+  
   
 ]);
 

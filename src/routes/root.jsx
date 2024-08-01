@@ -11,6 +11,7 @@ export default function Root() {
 
     const typeFilter = searchParams.get('price')
     
+    const displayedRealEstate = '';
 
 
     return(
@@ -22,6 +23,6 @@ export default function Root() {
 
              <RealEstateList/>
         </div>
-                </>
+     </>
     )
 }
